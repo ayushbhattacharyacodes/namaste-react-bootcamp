@@ -1,0 +1,7 @@
+What an Emmet does?
+What is CDN?
+What is 
+-crossorigin atrribute?
+-async defer attribute?
+What is Browser API?
+Why order matters in an HTML document?
