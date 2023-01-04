@@ -20,16 +20,32 @@ Role of Parcel
 16.Transitive dependencies
 17.browserslist
 18.Created server
+19.Tree Shaking - removing unwanted codes
 
 **/
 
 import React from "react";
-import  ReactDOM  from "react-dom/client";
-const heading = React.createElement("h1", { id: "title" }, "Hello Parcel !!");
-const heading2 = React.createElement("h2", { id: "title2" }, "Hi!!");
-const container = React.createElement("div", { class: "container" }, [
-  heading,
-  heading2,
-]);
+import ReactDOM from "react-dom/client";
+//using createElement
+// const heading = React.createElement("h1", { id: "title" }, "Parcel !!");
+
+const Heading2 = () => (
+  <p>Parcel!!</p>
+);
+
+//using JSX
+const heading2 = <h2 id="title2">Namaste React</h2>;
+
+const Heading = () => {
+  return (
+    <div>
+      <h1>Namaste React</h1>
+      <p>This is a functional component</p>
+      {Heading2()}
+      {heading2}
+    </div>
+  );
+};
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(container);
+root.render(<Heading />);
