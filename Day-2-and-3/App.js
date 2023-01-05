@@ -26,12 +26,11 @@ Role of Parcel
 
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "./Header.css";
 //using createElement
 // const heading = React.createElement("h1", { id: "title" }, "Parcel !!");
 
-const Heading2 = () => (
-  <p>Parcel!!</p>
-);
+const Heading2 = () => <p>Parcel!!</p>;
 
 //using JSX
 const heading2 = <h2 id="title2">Namaste React</h2>;
@@ -47,5 +46,25 @@ const Heading = () => {
   );
 };
 
+//Day-3 Assignment
+
+const Header = () => {
+  return (
+    <div className="header">
+      <h1 className="header-logo">SuperFinds</h1>
+      <form>
+        <input
+          id="search"
+          name="search"
+          type="search"
+          placeholder="Search here.."
+        />
+        <span></span>
+      </form>
+      <img src="https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small/user-profile-icon-free-vector.jpg" alt="User"/>
+    </div>
+  );
+};
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Heading />);
+root.render(<Header />);
