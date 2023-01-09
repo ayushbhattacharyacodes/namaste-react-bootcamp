@@ -1,0 +1,36 @@
+.logo>a{
+    text-decoration: none;
+    color:#000;
+}
+
+.navs>ul{
+    display: flex;
+    list-style-type:none ;
+}
+
+.navs>ul>li{
+    padding:1.2rem;
+}
+
+.navs>ul>li>a{
+  background-color: #C957BC;
+  color:#000;
+  text-decoration: none;
+  border-radius: 5px;
+  padding:0.2rem 0.7rem;
+}
+
+.navs>ul>li>a:hover{
+    background-color: #752092;
+    color:#fff;
+    transition: 0.3s ease-in;
+    cursor: pointer;
+}
+
+.header{
+    height:5rem;
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+    background-color: #FFC872;
+}

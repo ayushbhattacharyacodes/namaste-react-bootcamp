@@ -1,5 +1,13 @@
-const App = () => {
-    return <div>App created!!</div>;
-  };
+import Content from "./components/Content";
+import Header from "./components/Header";
 
-  export default App;
+const App = () => {
+  return (
+    <>
+      <Header />
+      <Content/>
+    </>
+  );
+};
+
+export default App;

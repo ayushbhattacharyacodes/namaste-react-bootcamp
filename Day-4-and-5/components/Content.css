@@ -1,0 +1,40 @@
+.restaurant-card{
+ width: 21rem;
+ height:22rem;
+ border-radius: 5px;
+ display: flex;
+ flex-direction: column;
+ gap:0.6rem;
+}
+
+
+.restaurant-card>img{
+    width:100%;
+    align-self: center;
+    border-radius: 5px;
+}
+
+.restaurant-card>h2{
+    align-self:center;
+}
+
+.restaurant-card>p,.restaurant-card>h4{
+ padding-left: 1.1rem;
+}
+
+.restaurant-card:hover{
+    border: 3px #efe5e5;
+    box-shadow: -8px 10px 2px #efe5e5;
+    transition: 0.3s ease-in;
+    cursor: pointer;
+}
+
+.content{
+    margin-top: 2rem;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap:20px;
+    justify-content: center;
+}
