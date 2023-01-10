@@ -1,0 +1,48 @@
+.content{
+    margin-top: 2rem;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap:20px;
+    justify-content: center;
+}
+.content-searchbox{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:0.8em
+}
+
+.search-input{
+    width: 25rem;
+    height: 2.8rem;
+    padding:0.9rem;
+    border-radius: 5px;
+    border-color: #efe5e5;
+}
+
+.search-button{
+    width:5em;
+    height:3.2em;
+    border-radius: 5px;
+    background-color: #752092;
+    color:#fff;
+    cursor: pointer;
+    border: none;
+}
+
+.content-restaurant_list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.1em;
+}
+
+.error-class{
+    color:rgb(146, 8, 8)
+}
