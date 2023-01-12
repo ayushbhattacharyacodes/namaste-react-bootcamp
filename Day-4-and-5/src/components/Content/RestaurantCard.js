@@ -2,7 +2,6 @@ import { imageSrc } from "../../constants/constants";
 import "./RestaurantCard.css";
 
 const RestaurantCard = ({ cloudinaryImageId, name, cuisines, avgRating }) => {
-  console.log(typeof parseInt(avgRating));
   return (
     <div className="restaurant-card">
       <img src={`${imageSrc}/${cloudinaryImageId}`} alt={name} />
