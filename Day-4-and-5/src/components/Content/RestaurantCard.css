@@ -31,3 +31,18 @@
        cursor: pointer;
    }
    
+   .rating-green{
+    width: 3.5rem;
+    background-color: lawngreen;
+    color: #000;
+    font-weight: bold;
+    font-size: 1.1rem;
+   }
+
+   .rating-red{
+    width: 3.5rem;
+    background-color: red;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1rem;
+   }
