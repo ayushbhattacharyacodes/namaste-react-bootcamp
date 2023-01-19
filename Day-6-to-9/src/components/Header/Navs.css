@@ -1,6 +1,8 @@
 .navs>ul{
     display: flex;
     list-style-type:none ;
+    align-items: center;
+    justify-content: center;
 }
 
 .navs>ul>li{
@@ -16,6 +18,22 @@
 }
 
 .navs>ul>li>a:hover{
+    background-color: #752092;
+    color:#fff;
+    transition: 0.3s ease-in;
+    cursor: pointer;
+}
+
+.auth-btn{
+    width:4.5rem;
+    background-color: #C957BC;
+    color:#000;
+    border: none;
+    border-radius: 5px;
+    padding:0.3rem 0.7rem;
+}
+
+.auth-btn:hover{
     background-color: #752092;
     color:#fff;
     transition: 0.3s ease-in;
