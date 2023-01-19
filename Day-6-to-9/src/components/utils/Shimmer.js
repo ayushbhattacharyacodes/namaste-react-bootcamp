@@ -9,16 +9,7 @@ const Shimmer = () => {
   );
   return (
     <div className="shimmer">
-       {shimmerBox}
-       {shimmerBox}
-       {shimmerBox}
-       {shimmerBox}
-       {shimmerBox}
-       {shimmerBox}
-       {shimmerBox}
-       {shimmerBox}
-       {shimmerBox}
-       {shimmerBox}
+      {Array(10).fill(" ").map((e)=>shimmerBox)}
     </div>
   );
 };
