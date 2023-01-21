@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Navs.css";
 
 const Navs = () => {
@@ -11,13 +12,13 @@ const Navs = () => {
     <div className="navs">
       <ul>
         <li>
-          <a href="/">Home</a>
+          <Link to="/" >Home</Link>
         </li>
         <li>
-          <a>About</a>
+          <Link to="/about">About</Link>
         </li>
         <li>
-          <a>Contact</a>
+          <Link to="/contact">Contact</Link>
         </li>
         <li>
           <a>Cart</a>

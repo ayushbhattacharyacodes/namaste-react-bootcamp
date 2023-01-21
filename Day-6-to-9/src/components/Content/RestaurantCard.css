@@ -40,9 +40,14 @@
    }
 
    .rating-red{
-    width: 3.5rem;
+    width: 3.2rem;
     background-color: red;
     color: #fff;
     font-weight: bold;
     font-size: 1.1rem;
+   }
+
+   .rating-green,   .rating-red{
+   margin-left: 0.8rem;
+   border-radius: 2px
    }

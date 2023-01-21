@@ -1,15 +1,18 @@
 import React from "react";
 import "./Shimmer.css";
 
+const ShimmerBox = () => {
+  return <div className="restaurant-card__shimmer"></div>;
+};
+
 const Shimmer = () => {
-  let shimmerBox = (
-    <div className="restaurant-card__shimmer">
-      <div className="shimmer-image"></div>
-    </div>
-  );
   return (
     <div className="shimmer">
-      {Array(10).fill(" ").map((e)=>shimmerBox)}
+      {Array(10)
+        .fill(" ")
+        .map((e, idx) => (
+          <ShimmerBox key={idx} />
+        ))}
     </div>
   );
 };
