@@ -1,14 +1,7 @@
-// if (data.length === 0) {
-//   setIsLoading(false)
-//   setFilteredRestaurants(data)
-//   // setFilteredRestaurants((prev) => [...prev, ...data]);
-// } else {
-//   setFilteredRestaurants(data);
-// }
-
 import React, { useEffect, useState } from "react";
 import RestaurantCard from "./RestaurantCard";
 import { DAPI_URL } from "../../constants/constants";
+import { Link } from "react-router-dom";
 import "./Content.css";
 import Shimmer from "../utils/Shimmer";
 
@@ -23,7 +16,6 @@ const Content = () => {
   const [inputValue, setInputValue] = useState("");
   const [allRestaurants, setAllRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
 
   async function getRestaurantData() {
     const response = await fetch(DAPI_URL);
@@ -71,7 +63,9 @@ const Content = () => {
         )}
         {filteredRestaurants?.length > 0 &&
           filteredRestaurants?.map((restaurant) => (
-            <RestaurantCard {...restaurant.data} key={restaurant.data.id} />
+            <Link to={"/restaurants/"+restaurant.data.id} key={restaurant.data.id} >
+              <RestaurantCard {...restaurant.data} />
+            </Link>
           ))}
         {filteredRestaurants?.length === 0 && allRestaurants?.length > 0 && (
           <h2 className="error-class">Oops! Couldn't find any restaurants😣</h2>
