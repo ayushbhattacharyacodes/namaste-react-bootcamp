@@ -63,7 +63,7 @@ const Content = () => {
         )}
         {filteredRestaurants?.length > 0 &&
           filteredRestaurants?.map((restaurant) => (
-            <Link to={"/restaurants/"+restaurant.data.id} key={restaurant.data.id} >
+            <Link to={"/restaurants/"+restaurant.data.id} key={restaurant.data.id} style={{textDecoration:'none',color:'#000'}}>
               <RestaurantCard {...restaurant.data} />
             </Link>
           ))}
