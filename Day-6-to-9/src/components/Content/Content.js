@@ -1,25 +1,21 @@
 import React, { useEffect, useState } from "react";
 import RestaurantCard from "./RestaurantCard";
+import  useRestaurant  from "../../hooks/useRestaurant";
 import { DAPI_URL } from "../../constants/constants";
 import { Link } from "react-router-dom";
-import "./Content.css";
 import Shimmer from "../utils/Shimmer";
-
-const filterRestaurant = (restaurants, inputValue) => {
-  const filterData = restaurants.filter((restaurant) =>
-    restaurant?.data?.name.toLowerCase().includes(inputValue.toLowerCase())
-  );
-  return filterData;
-};
+import { filterRestaurant } from "../../helpers/helper";
+import "./Content.css";
 
 const Content = () => {
   const [inputValue, setInputValue] = useState("");
   const [allRestaurants, setAllRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
-
+   
   async function getRestaurantData() {
     const response = await fetch(DAPI_URL);
     const data = await response.json();
+    console.log(data?.data?.cards[2]?.data?.data?.cards);
     setAllRestaurants(data?.data?.cards[2]?.data?.data?.cards);
     setFilteredRestaurants(data?.data?.cards[2]?.data?.data?.cards);
   }

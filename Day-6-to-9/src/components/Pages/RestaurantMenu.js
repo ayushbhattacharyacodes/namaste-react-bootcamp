@@ -1,32 +1,22 @@
-import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { imageSrc, RES_ID } from "../../constants/constants";
+import { imageSrc } from "../../constants/constants";
+import useRestaurantMenu from "../../hooks/useRestaurantMenu";
 import Shimmer from "../utils/Shimmer";
 import "./RestaurantMenu.css";
 
 const RestaurantMenu = () => {
-  const [restaurantMenu, setRestaurantMenu] = useState([]);
   const params = useParams();
   const { id } = params;
+  const data = useRestaurantMenu(id)
 
-  async function getRestaurantsMenu() {
-    const response = await fetch(`${RES_ID}${id}`);
-    const data = await response.json();
-    setRestaurantMenu(Object.values(data?.data?.menu?.items));
-    console.log(restaurantMenu);
-  }
-
-  useEffect(() => {
-    getRestaurantsMenu();
-  }, []);
   return (
     <div className="menu">
       <h2 className="menu-title"> Menu </h2>
       <ul className="menu-ul">
-        {restaurantMenu?.map((item) => (
+        {data?.map((item) => (
           <li key={item.id}>
             <div>
-              {item.cloudinaryImageId.length === 0 ? (
+              {item?.cloudinaryImageId?.length === 0 ? (
                 <div>{""}</div>
               ) : (
                 <img

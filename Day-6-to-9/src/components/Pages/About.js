@@ -26,8 +26,8 @@ class About extends Component{
     console.log("Parent Render called")
     return(
       <div>
-        About Us
-        <Profile/>
+        <p>Eat St. was created with vision of delivering food while on foot.</p>
+        {/* <Profile/> */}
         <ProfileClass/>
       </div>
     )

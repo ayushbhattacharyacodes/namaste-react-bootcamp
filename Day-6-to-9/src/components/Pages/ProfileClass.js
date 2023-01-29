@@ -31,8 +31,8 @@ class Profile extends Component {
     return (
       <div>
         <h2>This is Profile Class Component</h2>
-        <p>{this.state.count}</p>
-        <button onClick={()=>{this.setState({count:1})}}>Count</button>
+        {/* <p>{this.state.count}</p>
+        <button onClick={()=>{this.setState({count:1})}}>Count</button> */}
       </div>
     );
   }

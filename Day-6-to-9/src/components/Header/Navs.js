@@ -21,6 +21,9 @@ const Navs = () => {
           <Link to="/contact">Contact</Link>
         </li>
         <li>
+          <Link to="/instamart">Instamart</Link>
+        </li>
+        <li>
           <a>Cart</a>
         </li>
         <li>
