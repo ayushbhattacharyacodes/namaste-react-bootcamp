@@ -1,0 +1,8 @@
+.header{
+    height:5rem;
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+    gap:18rem;
+    background-color: #FFC872;
+}

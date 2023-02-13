@@ -1,0 +1,22 @@
+.shimmer{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:1.1rem;
+}
+.restaurant-card__shimmer{
+    width: 15rem;
+    height:18rem;
+    border-radius: 5px;
+    background-color: rgb(212, 204, 204);
+}
+
+.shimmer-image{
+    width:100%;
+    align-self: center;
+    color:grey;
+    border-radius: 5px;
+}
+
